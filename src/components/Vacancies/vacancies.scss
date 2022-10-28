@@ -1,0 +1,137 @@
+.vacancies {
+    padding: 0 20px;
+    margin-bottom: 70px;
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: #1C1E1F;
+        margin-bottom: 20px;
+    }
+    .vacancies__fillters-wrapper {
+        max-width: 790px;
+
+    }
+    &__fillters {
+        border: 1px solid rgba(232, 232, 232, 0.85);
+        border-radius: 28px;
+        display: flex;
+        justify-content: space-between;
+        padding: 6px;
+        margin-bottom: 40px;
+        .vacancies__filters-btn--active {
+            cursor: pointer;
+            background: #1C1E1F;
+            border: 0;
+            border-radius: 22px;
+            padding: 14px 24px;
+            color: #fff;
+        }
+        .vacancies__filters-btn {
+            cursor: pointer;
+            border: 0;
+            background: transparent;
+            border-radius: 22px;
+            padding: 14px 24px;
+            color: #fff;
+            color: #1C1E1F;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 40px;
+        .vacancies__item {
+            display: flex;
+            cursor: pointer;
+            &--img {
+                width: 180px;
+                height: 190px;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+            &-info {
+
+                &--title {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.02em;
+                    color: #1C1E1F;
+                    max-width: 340px;
+                    margin-bottom: 11px;
+                    cursor: pointer;
+                }
+                &--dop {
+                    justify-content: space-between;
+                    display: flex;
+                    max-width: 250px;
+                    margin-bottom: 10px;
+                    h2 {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        letter-spacing: 0.01em;          
+                        color: #757778;
+                    }
+                    span {
+                        color: #1C1E1F;
+                        font-size: 16px;
+                    }
+                    .vacancies__item-info--site {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            margin-right: 6px;
+                        }
+                    }
+                }
+                &--desc {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.01em;              
+                    color: #757778;
+                    max-width: 340px;
+                    margin-bottom: 20px;
+                }
+
+                &--top {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 310px;
+                    h2 {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        letter-spacing: -0.02em;            
+                        color: #C0CBD0;
+                        cursor: auto;
+                    }
+                    h3 {
+                        font-weight: 500;
+                        line-height: 14px;
+                        letter-spacing: 0.01em;
+                        color: #02B6E0;
+                        display: flex;
+                        align-items: center;
+                        img {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .vacancies__item-info--btn {
+            cursor: pointer;
+        }
+    }
+    .buttonTransporent{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+}

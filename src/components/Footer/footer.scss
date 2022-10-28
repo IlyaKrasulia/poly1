@@ -1,0 +1,90 @@
+.footer {
+    padding: 0 20px;
+    background: #F5F7F8;
+    &__info {
+        width: 50%;
+        &-title {
+            font-weight: 700;
+            font-size: 32px;   
+            color: #1C1E1F;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0.01em;
+            color: #1C1E1F;
+            margin-bottom: 16px;
+            img {
+                margin-right: 10px;
+            }
+        }
+        
+        &-form {
+            margin-bottom: 58px;
+            display: flex;
+            width: 100%;
+            margin-top: 50px;
+            input {
+                width: 50%;
+                padding: 20px;
+                background: #FFFFFF;
+                border-radius: 35px;
+                margin-bottom: 20px;
+                border: 0;
+                margin-right: 20px;
+            }
+            button {
+                background: #02B6E0;      
+                border: 1px solid #02B6E0;
+                border-radius: 35px;
+                color: #FFFFFF;
+                font-size: 14px;
+                padding: 17px 24px;
+                font-weight: 400;
+                height: 55px;
+                width: 200px;
+            }
+        }
+
+        &-connection {
+            h2 {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;     
+                letter-spacing: -0.02em;           
+                color: #1C1E1F;
+                margin-bottom: 12px;
+            }
+            h3 {
+                font-weight: 600;
+                line-height: 18px;        
+                letter-spacing: 0.01em;
+                color: #02B6E0;
+                margin-bottom: 20px;
+            }
+            img {
+                background: #02B6E0;
+                border-radius: 12px;
+                padding: 8px;
+                margin-right: 24px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.phoneInp {
+    display: none;
+}

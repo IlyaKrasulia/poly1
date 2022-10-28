@@ -1,0 +1,201 @@
+@media (max-width: 1100px) {
+    .header {
+        background-position-x: 80%;
+        &__top {
+            &-logo {
+                width: 52px;
+                height: 25px;
+                margin-right: 45px;
+            }
+            .header__menu {
+                &-link {
+                    font-size: 14px;
+                    letter-spacing: 0.01em;
+                    margin: 0 20px;
+                }
+            }
+            .header__right {
+                &-changeLanguage {
+                    img {
+                        width: 24px;
+                        height: 20px;
+                        border-radius: 5px;
+                    }
+                    h4 {
+                        font-size: 14px;
+                        
+                    }
+                    .header__right-changeLanguage--arr {
+                            margin-left: 8.5px;
+                            height: auto;
+                            width: auto;
+                    }
+                }
+            }
+        }
+
+        .header__midle {
+            margin-top: 71px;
+            margin-bottom: 100px;
+            &-title {
+                font-size: 42px;
+                letter-spacing: 0.02em; 
+            }
+            &-description {
+                font-size: 18px ;
+            }
+            button {
+                padding: 14px 32px;
+                width: 200px;
+                font-size: 16px;
+            }
+        }
+
+        .HotVacancies {
+             &__top {
+                margin-bottom: 55px;
+                &-title {
+                    font-size: 24px;
+                    img {
+                        width: 21px;
+                        height: 29px; 
+                    }
+                }
+                &-all {
+                    font-size: 14px;
+                    img {
+                        width: 8px;
+                        height: 8px;
+                        margin-left: 10px;
+                    }
+                }
+             }
+             &__item {
+                 &-title {
+                    font-size: 18px;
+                    line-height: 24px;
+                 }
+             }
+        }
+    }
+    .swiper-container {
+        width: 1100px;
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        .HotVacancies {
+                padding: 30px 20px;
+                border-radius: 0;
+        }
+    }
+    
+}
+
+@media (max-width: 840px) {
+    
+    .header {
+        &__top-logo {
+            margin-right: 20px;
+        }
+        .header__right {
+            button {
+                margin-right: 20px;
+            }
+        }
+        }
+        .header__menu {
+            .header__menu-link {
+                margin: 0 10px;
+            }
+        }    
+}
+
+@media (max-width: 715px) {
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+    }
+    .header {
+        .header__top {
+        &-logo {
+            margin: 0;
+        }
+        .header__right {
+            button {
+                display: none;
+            }
+        }
+        .header__menu {
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            color: #1C1E1F;
+            width: 90%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+            top: 170px;
+            z-index: 999;
+            border-radius: 10px;
+            padding: 56px 0;
+            visibility: hidden;
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url(../../images/icons/close-modal.svg);
+                width: 12px;
+                height: 12px;
+            }
+            
+            &-link {
+                padding: 16px 0;
+                margin: 0;
+            }
+        }
+        .header__right-changeLanguage {
+        h4{
+            display: none;
+        }
+        .header__right-changeLanguage--arr {
+            margin: 0;
+        }
+        }
+        }
+        .header__midle {
+            &-title {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 11px;
+            }
+            &-description {
+                font-size: 13px;
+                line-height: 18px;
+                margin-bottom: 32px;
+            }
+            button {
+                padding: 11px 32px;
+                font-size: 14px;
+                margin-bottom: 93px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .header {
+        .HotVacancies__top {
+            padding: 0;
+            &-title {
+                font-size: 18px;
+            }
+        }
+        .header__top .header__right-changeLanguage .flag-img {
+            width: 20px;height: 16px;
+            border-radius: 3px;
+            margin-right: 7px;
+        }
+    }
+}

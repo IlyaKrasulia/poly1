@@ -1,0 +1,70 @@
+@media (max-width: 1000px) {
+    .tutorial {
+        &__cards {
+            flex-wrap: wrap;
+        }
+        &__card {
+            &-title {
+                font-size: 16px; 
+            }
+            &-description {
+                font-size: 14px;
+                max-width: 195px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 770px) {
+    .tutorial {
+        &__card {
+            margin-bottom: 50px;   
+            width: 155px;
+            &-description {
+                font-size: 14px;
+                width: 155px;
+            }
+        }
+    }
+}
+
+@media (max-width: 522px) {
+    .tutorial {
+        &__card {
+            margin-bottom: 50px;   
+            width: 220px;
+            &-description {
+                font-size: 14px;
+                width: 220px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 498px) {
+    .tutorial {
+        &__cards {
+            width: 100%;
+        }
+        &__card {
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            &-img {
+                margin: 0;
+                margin-right: 18px;
+                width: 70px;
+                height: 70px;
+                img {
+                    width: 40px;height: 40px;
+                }
+            }
+            &-title {
+                margin-bottom: 6px;
+            }
+        }
+    }
+}

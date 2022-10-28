@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+button {
+    background: transparent;
+    border: 0;
+}
+
+.container {
+    max-width: 1155px;
+    margin: 0 auto;
+}
+
+.buttonBlue {
+    padding: 14px 32px;
+    background-color: #02B6E0;
+    border-radius: 24px;
+    border: 0;
+    font-family: 'Gilroy';
+    color: #F5F7F8;
+    font-weight: 500;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}    
+
+.buttonTransporent {
+    color: #02B6E0;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    padding: 14px 32px;
+    border: #02B6E0 1px solid;
+    border-radius: 24px;
+    cursor: pointer;
+    background: transparent;
+}
+
+
+/* TABLE */
+@media (max-width: 1100px) {
+    .buttonBlue {
+        padding: 12px 2px;
+        width: 140px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 12px;
+    } 
+}

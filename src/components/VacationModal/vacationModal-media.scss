@@ -1,0 +1,120 @@
+@media (max-width: 1100px) {
+    .vacationModal-wrapper {
+        .vacationModal {
+            .modal-close {
+                top: 24px;
+                right: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .vacationModal-wrapper {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.72);
+        z-index: 99;
+        .vacationModal {
+            background-color: #fff;
+            position:fixed;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            z-index: 9999;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            .modal-close {
+                top: 15px;
+                right: 15px;
+            }
+            .vacationModal-left {
+                width: 325px;
+                height: 600px;
+                border-radius: 10px;
+            }
+            .vacationModal__info {
+                padding: 0 30px;
+                h1 {
+                    font-size: 24px;
+                    line-height: 29px;     
+                }
+                .info {
+                    max-width: 300px;
+                }
+                p {
+                    margin-bottom: 33px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .vacationModal-wrapper {
+        .vacationModal {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .vacationModal-wrapper {
+        .vacationModal {
+            .vacationModal-left {
+                width: 225px;
+                height: 500px;
+            }
+            .vacationModal__info {
+                padding: 0 40px;
+                h1 {
+                    margin-bottom: 10px;
+                }
+                .info {
+                    margin-bottom: 20px;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 685px) {
+    .vacationModal-wrapper {
+        .vacationModal {
+            flex-direction: column;
+            width: 90%;
+            .modal-close {
+                
+            }
+            .vacationModal-left {
+                width: 100%;
+                height: 20vh;
+                margin-bottom: 20px;
+            }
+            .vacationModal__info {
+                padding: 0 20px;
+                h1 {
+                    font-size: 18px;
+                }
+                .info {
+                    h2 {
+                        font-size: 12px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                }
+                button {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

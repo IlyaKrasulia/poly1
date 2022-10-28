@@ -1,0 +1,44 @@
+.tutorial {
+    padding: 0 20px;
+    margin-bottom: 100px;
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #1C1E1F;
+        margin-bottom: 50px;
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        padding-right: 20px;
+        &:last-child {
+            padding-right: 0;
+        }
+        &-img {
+            background: #F5F7F8;
+            border-radius: 13px;
+            padding: 15px;
+            margin-bottom: 40px;
+        }
+        &-title {
+            font-weight: 600;
+            line-height: 24px;
+            font-size: 20px;
+            letter-spacing: -0.02em;     
+            color: #1C1E1F;
+            margin-bottom: 14px;
+        }
+        &-description {
+            max-width: 235px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+            color: #757778;
+        }
+    }
+    
+}

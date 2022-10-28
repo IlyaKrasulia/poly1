@@ -1,0 +1,96 @@
+.about-us {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    padding: 0 20px;
+    &__info { 
+        
+        &-title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 29px;
+            color: #1C1E1F;
+            margin-bottom: 14px;
+            max-width: 380px;
+            span {
+                color: #02B6E0;
+            }
+        }
+        &-subtitle {
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: -0.04em;
+            color: #757778;
+            margin-bottom: 24px;
+            max-width: 431px;
+        }
+        &-description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.01em;     
+            color: #757778;
+            margin-bottom: 24px;
+            max-width: 431px;
+        }
+    }
+    &__cards {
+        max-width: 660px;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        &-card {
+            max-width: 320px; 
+            height: 180px;
+            margin-bottom: 23px;
+            border-radius: 13px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 18px;padding-left: 18px;
+            img {
+                height: 132px;width: 132px;
+            }
+            &--title {
+                font-weight: 600;
+                font-size: 20px;  
+                letter-spacing: -0.02em;
+                color: #1C1E1F;
+                margin-bottom: 8px;
+            }
+            &--info {
+                font-weight: 400;
+                line-height: 22px;      
+                letter-spacing: 0.01em;
+                color: #757778;
+                max-width: 264px;
+            }
+        }
+        .item-1, .item-3 {
+            margin-right: 19px;
+            margin-top: -20px;
+        }
+        .item-1 {
+            img {
+                transform: translate(131px, -15px);
+            }
+        }
+        .item-2 {
+            img {
+                transform: translate(131px, 8px);
+            }
+        }
+        .item-3 {
+            margin-top: -10px;
+            img {
+                transform: translate(131px, 19px);
+            }
+        }
+        .item-4 {
+            img {
+                transform: translate(131px, 13px);
+            }
+        }
+    }
+}
