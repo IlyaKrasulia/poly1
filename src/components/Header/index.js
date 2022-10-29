@@ -77,7 +77,7 @@ const Header = ({ vacancies, setVacationModalType, vacationModalType, setLeaveRe
     }
 
     const setFixedMenu = () => {
-        if(window.scrollY>=500) {
+        if(window.scrollY>=300) {
             setMenuFix(true);
         } else {
             setMenuFix(false);
