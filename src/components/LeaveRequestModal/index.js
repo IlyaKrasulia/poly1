@@ -29,16 +29,26 @@ const LeaveRequestModal = ({leaveRequestType, setLeaveRequestModalVisibleHeader,
 
     }  
     
-    // const Validate = Yup.object().shape({
-    //     name: Yup.string()
-    //       .min(2, 'Too Short!')
-    //       .max(10, 'Too Long!')
-    //       .required('Required'),
-    //       phone: Yup.number()
-    //       .required('Required')
-    //       .min(16, 'Too Short!')
-    //       .max(18, 'Too Long!')
-    //   });
+    const Validate = Yup.object().shape({
+        user_name: Yup.string()
+          .min(2, 'Too Short!')
+          .max(10, 'Too Long!')
+          .required('Required'),
+        phone: Yup.number()
+          .min(17, 'Too Short!')
+          .required('Required')
+      });
+
+      const valid = (e) => {
+        if(!name.length>=2 || phone.length!==17) {
+            alert('err');
+            console.log(phone.length);
+            e.preventDefault()
+        } else {
+            e.preventDefault()
+            onSubmissingForm()
+        }
+      }
 
 
     return (
@@ -52,10 +62,12 @@ const LeaveRequestModal = ({leaveRequestType, setLeaveRequestModalVisibleHeader,
                     <p>{t('leaveRequestModalSubtitle')}</p>
             <Formik
                 initialValues={{ user_name: '', phone: '' }}
-                >
+                validate={Validate}
+            >
             
-                <Form onSubmit={onSubmissingForm}>
+                <Form onSubmit={(e) => valid(e)}>
                     <Field 
+                        id="user_name"
                         value={name}
                         name="user_name" 
                         type="text" 
@@ -64,6 +76,7 @@ const LeaveRequestModal = ({leaveRequestType, setLeaveRequestModalVisibleHeader,
                         required
                     />
                     <InputMask 
+                        id="phone"
                         value={phone}
                         name="user_phone"
                         className="form__input" 

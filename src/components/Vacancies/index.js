@@ -26,6 +26,7 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType, leave
     const [ vacModal, setVacModal ] = useState(false);
     const [ leaveRequestModalVisibleVacs, setLeaveRequestModalVisileaveVacs ] = useState(false);
     const [ vacModalData, setVacModalData ] = useState({});
+    const [ vacsVisible, setVacsVisible ] = useState(false)
 
     if(vacModal) {
         document.body.style.overflow = 'hidden';
@@ -61,6 +62,10 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType, leave
     const openRequestModal = () => {
         setLeaveRequestType('vacancies');
         setLeaveRequestModalVisileaveVacs(true);
+    }
+
+    const hendleSeeAll = () => {
+        setVacsVisible(!vacsVisible);
     }
 
     return (
@@ -104,9 +109,9 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType, leave
                             </>
                             
                         )
-                    }).splice(0, 8)}
+                    }).splice(0, vacsVisible ? vacFilter.length : 8)}
                 </div>
-                {vacFilter.length >= 8 ? <button className="buttonTransporent">{t('showMore')}</button> : ''}
+                {vacFilter.length >= 8 ? <button onClick={hendleSeeAll} className="buttonTransporent">{vacsVisible ? t('hide') : t('showMore')}</button> : ''}
             </div>
         </div>
         {leaveRequestModalVisibleVacs && <LeaveRequestModal leaveRequestType={leaveRequestType} setLeaveRequestModalVisileaveVacs={setLeaveRequestModalVisileaveVacs}/>}

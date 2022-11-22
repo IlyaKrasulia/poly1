@@ -40,6 +40,7 @@
     "en": "Велика Британія",
     "au": "Австрія",
     "showMore": "Показати ще",
+    "hide": "Приховати",
     "footerTitle": "Завжди на зв’язку",
     "adress": "Київ, вул. Голосіївська 15",
     "phone": "Номер телефона",
@@ -56,6 +57,5 @@
     "leaveRequestModalTitle": "Потрібна консультація?",
     "leaveRequestModalSubtitle": "Залиште свої данні тут, і ми Вам зателефонуємо!",
     "leaveRequestModalPlaceholderName": "Ваше ім’я",
-    "leaveRequestModalTitlePlaceholderPhone": "Номер телефона",
-    "test": "test"
+    "leaveRequestModalTitlePlaceholderPhone": "Номер телефона"
 }
