@@ -12,7 +12,7 @@ import markSvg from '../../images/icons/label.svg';
 import write from '../../images/icons/write.svg';
 
 
-const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType }) => {
+const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType, leaveRequestType }) => {
 
     let plVac = vacancies.filter(it => it.country === 'pl');
     const nlVac = vacancies.filter(it => it.country === 'nl');
@@ -24,7 +24,7 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType }) => 
     const [ vacFilter, setVacFilter ] = useState(vacancies);
     const [ activeFilter, setActiveFilter ] = useState(0);
     const [ vacModal, setVacModal ] = useState(false);
-    const [ leaveRequestModalVisible, setLeaveRequestModalVisileave ] = useState(false);
+    const [ leaveRequestModalVisibleVacs, setLeaveRequestModalVisileaveVacs ] = useState(false);
     const [ vacModalData, setVacModalData ] = useState({});
 
     if(vacModal) {
@@ -48,10 +48,6 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType }) => 
         console.log(vacFilter);
     }
 
-    const openModal = () => {
-        setVacModal(true);
-    }
-
     const closeModal = () => {
         setVacModal(false);
     }
@@ -64,11 +60,7 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType }) => 
 
     const openRequestModal = () => {
         setLeaveRequestType('vacancies');
-        setLeaveRequestModalVisileave(true);
-    }
-
-    const leaveRequestModalCloseVacs = () => {
-        setLeaveRequestModalVisileave(false);
+        setLeaveRequestModalVisileaveVacs(true);
     }
 
     return (
@@ -117,7 +109,7 @@ const Vacancies = ({ vacancies, setVacationModalType, setLeaveRequestType }) => 
                 {vacFilter.length >= 8 ? <button className="buttonTransporent">{t('showMore')}</button> : ''}
             </div>
         </div>
-        {leaveRequestModalVisible && <LeaveRequestModal leaveRequestModalCloseVacs={leaveRequestModalCloseVacs}/>}
+        {leaveRequestModalVisibleVacs && <LeaveRequestModal leaveRequestType={leaveRequestType} setLeaveRequestModalVisileaveVacs={setLeaveRequestModalVisileaveVacs}/>}
         {vacModal && <VacationModal VacData={vacModalData} closeModalVacs={closeModal}/>}
         </Element>
     )

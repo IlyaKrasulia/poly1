@@ -116,10 +116,6 @@ function App() {
     },
   ]
 
-  const scrollToElem = (test) => {
-      console.log(test);
-  }
-
   return (
     <div className="App">
       <Header 
@@ -131,6 +127,7 @@ function App() {
       />
       <AboutUs 
         setLeaveRequestType={setLeaveRequestType}
+        leaveRequestType={leaveRequestType}
       />
       <Tutorial />
       <Vacancies 

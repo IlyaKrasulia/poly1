@@ -12,24 +12,20 @@ import thumbPng from '../../images/icons/thumb-up-iso-color.png'
 
 import LeaveRequestModal from "../LeaveRequestModal";
 
-const AboutUs = ({ setLeaveRequestType }) => {
+const AboutUs = ({ setLeaveRequestType, leaveRequestType }) => {
 
-    const [ leaveRequestModalVisible, setLeaveRequestModalVisible ] = useState(false);
+    const [ leaveRequestModalVisibleAboutUs, setLeaveRequestModalVisibleAboutUs ] = useState(false);
 
     const { t, i18n } = useTranslation();
 
-    const closeModal = () => {
-        setLeaveRequestModalVisible(false);
-    }
-
     const openModal = () => {
         setLeaveRequestType('aboutUs');
-        setLeaveRequestModalVisible(true);
+        setLeaveRequestModalVisibleAboutUs(true);
     }
 
     return(
         <Element name="aboutUs">
-            {leaveRequestModalVisible && <LeaveRequestModal closeModalAboutUs={closeModal}/>}
+            {leaveRequestModalVisibleAboutUs && <LeaveRequestModal leaveRequestType={leaveRequestType} setLeaveRequestModalVisibleAboutUs={setLeaveRequestModalVisibleAboutUs}/>}
         <div className="container">
             <div className="about-us">
                 <div className="about-us__info">

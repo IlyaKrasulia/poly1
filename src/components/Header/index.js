@@ -36,27 +36,19 @@ const Header = ({ vacancies, setVacationModalType, vacationModalType, setLeaveRe
     }
 
     const [ changeLanguagePopupOpened, setChangeLanguagePopupOpened ] = useState(false);
-    const [ LeaveRequestModalVisible, setLeaveRequestModalVisible ] = useState(false);
+    const [ LeaveRequestModalVisibleHeader, setLeaveRequestModalVisibleHeader ] = useState(false);
     const [ VacationModalVisible, setVacationModalVisible ] = useState(false);
     const [ menuPopup, setMenuPopup ] = useState(false);
     const [ modalData, setModalData ] = useState({});
     const [ menuFix, setMenuFix] = useState(false);
 
 
-    if(VacationModalVisible || LeaveRequestModalVisible || changeLanguagePopupOpened || menuPopup) {
+    if(VacationModalVisible || LeaveRequestModalVisibleHeader || changeLanguagePopupOpened || menuPopup) {
         document.body.style.overflow = 'hidden';
     } else {
         document.body.style.overflow = 'auto';
     }
-
-    const modalOpen = (state) => {
-        state(true);
-    }
-
-    const leaveRequestModalClose = () => {
-        setLeaveRequestModalVisible(false);
-    }
-
+    
     const vacationModalClose = () => {
         setVacationModalVisible(false);
     }
@@ -68,8 +60,8 @@ const Header = ({ vacancies, setVacationModalType, vacationModalType, setLeaveRe
     }
 
     const changeRequestModalData = () => {
-        setLeaveRequestModalVisible(true);
         setLeaveRequestType('header');
+        setLeaveRequestModalVisibleHeader(true);
     }
 
     const closeMenu = () => {
@@ -88,8 +80,8 @@ const Header = ({ vacancies, setVacationModalType, vacationModalType, setLeaveRe
 
     return (
         <div className="header">
-            {VacationModalVisible && <VacationModal  vacationModalClose={vacationModalClose} data={modalData} vacationModalType={vacationModalType} setLeaveRequestModalVisible={setLeaveRequestModalVisible} /> } 
-            {LeaveRequestModalVisible && <LeaveRequestModal modalCloseHeader={leaveRequestModalClose} leaveRequestType={leaveRequestType}/>}
+            {VacationModalVisible && <VacationModal setVacationModalVisible={setVacationModalVisible} vacationModalClose={vacationModalClose} data={modalData} vacationModalType={vacationModalType}/> } 
+            {LeaveRequestModalVisibleHeader && <LeaveRequestModal setLeaveRequestModalVisibleHeader={setLeaveRequestModalVisibleHeader} leaveRequestType={leaveRequestType}/>}
             {changeLanguagePopupOpened && 
                 <div className="change-language-popup--wrapper" onClick={e => (e.currentTarget === e.target) && setChangeLanguagePopupOpened(false)}>
                     <div className="change-language-popup">

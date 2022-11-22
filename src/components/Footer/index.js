@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import InputMask from 'react-input-mask';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useContactForm } from '../../hooks/useContactForm' 
 
 
 import footerImg from '../../images/footer-img.png'
@@ -19,8 +20,8 @@ import './footer-media.scss';
 
 const Footer = () => {
 
+    const { name, phone, isSending, success, error, onSubmissingForm, onChangeName, onChangePhone } = useContactForm()
     const [ phoneInput, setPhoneInput ] = useState('')
-
     const { t, i18n } = useTranslation();
 
     const Validate = Yup.object().shape({
@@ -41,7 +42,7 @@ const Footer = () => {
                     <h3 className="footer__info-site"><img src={markSvg} alt="icon"/>{t('adress')}</h3>
                     <Formik
                         initialValues={{phone: ''}}
-                        validationSchema={Validate}
+                        // validationSchema={Validate}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
                               alert(phoneInput);
@@ -49,9 +50,16 @@ const Footer = () => {
                             }, 400);
                           }}
                     >
-                        <Form className="footer__info-form">
-                            <InputMask onChange={e => setPhoneInput(e.target.value)} type="text" placeholder={t('phone')} mask="+38\0 99 999 99 99"/>
-                            {/* <Field type="text" name="phone" value={phoneInput}/> */}
+                        <Form onSubmit={onSubmissingForm} className="footer__info-form">
+                            <InputMask 
+                                type="text" 
+                                placeholder={t('phone')} 
+                                mask="+38\0 99 999 99 99"
+                                value={phone}
+                                name="user_phone"
+                                onChange={onChangePhone}
+                                required
+                            />
                             <ErrorMessage name="phone" component="div" />
                             <button type="submit">{t('callMe')}</button>
                         </Form>
